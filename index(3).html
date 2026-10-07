@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fair Division — Hannaneh Akrami</title>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --card: #ffffff;
+      --text: #1f2933;
+      --muted: #5f6c7b;
+      --accent: #183153;
+      --accent-soft: #eaf0f7;
+      --border: #dfe5ec;
+      --max-width: 940px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    header {
+      background: var(--accent);
+      color: white;
+      padding: 4.5rem 1.5rem 3.5rem;
+    }
+
+    .wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    header .subtitle {
+      margin-top: 0.9rem;
+      font-size: 1.2rem;
+      color: #d9e4f0;
+    }
+
+    main {
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .course-info {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: -2.8rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .info-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.4rem;
+      box-shadow: 0 8px 24px rgba(24, 49, 83, 0.08);
+    }
+
+    .info-card .label {
+      display: block;
+      margin-bottom: 0.35rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .info-card .value {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.8rem 2rem;
+      margin-bottom: 1.4rem;
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.55rem;
+      color: var(--accent);
+    }
+
+    p {
+      margin: 0 0 1rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.3rem;
+    }
+
+    li {
+      margin-bottom: 0.6rem;
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    .small-note {
+      display: inline-block;
+      margin-top: 0.25rem;
+      font-size: 0.82rem;
+      font-weight: 400;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    .note {
+      margin-top: 1rem;
+      padding: 0.9rem 1rem;
+      border-left: 4px solid var(--accent);
+      background: var(--accent-soft);
+      border-radius: 6px;
+      color: #334155;
+    }
+
+    .schedule {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .schedule th,
+    .schedule td {
+      padding: 0.65rem 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .schedule th {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .schedule td:first-child,
+    .schedule th:first-child {
+      width: 6.5rem;
+      white-space: nowrap;
+      padding-left: 0;
+    }
+
+    .schedule tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    footer {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem 2.5rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .course-info {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .course-info {
+        grid-template-columns: 1fr;
+        margin-top: -1.8rem;
+      }
+
+      header {
+        padding-top: 3.3rem;
+        padding-bottom: 3rem;
+      }
+
+      section {
+        padding: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Fair Division</h1>
+      <div class="subtitle">Selected Topics in Algorithms and Optimization <em>(Modul V5C4)</em><br>Course taught by Hannaneh Akrami</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="course-info">
+        <div class="info-card">
+          <span class="label">Teacher</span>
+          <div class="value">Hannaneh Akrami</div>
+        </div>
+
+        <div class="info-card">
+          <span class="label">Time &amp; Location</span>
+          <div class="value">
+            Monday 10&ndash;12<br>
+            Room 1.002 (Seminarraum)<br>
+            <span class="small-note">Lenn&eacute;stra&szlig;e 2&ndash;4</span>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <span class="label">Format</span>
+          <div class="value">
+            2-hour lecture per week<br>
+            Oral exam<br>
+            <span class="small-note">Written exam if more than 10 students register</span>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <span class="label">Credits</span>
+          <div class="value">5 ECTS</div>
+        </div>
+      </div>
+
+      <section>
+        <h2>Course Description</h2>
+
+        <p>
+          Fair Division is a fundamental area at the intersection of algorithm design,
+          game theory, and economics, concerned with allocating resources among agents
+          in a way that is fair and efficient. Applications range from dividing goods
+          and tasks to modern problems such as allocating computational resources,
+          matching markets, and online platforms.
+        </p>
+
+        <p>
+          This course introduces the mathematical and algorithmic foundations of fair
+          division, covering both classical results and recent developments. Emphasis
+          will be placed on precise fairness notions and algorithmic techniques for
+          achieving fair outcomes under various constraints. In addition, the course
+          will highlight existential results, including proofs of the existence of fair
+          allocations under various models, and their relationship to constructive
+          (algorithmic) methods and efficiency guarantees such as Nash social welfare.
+        </p>
+
+        <p>
+          The course aims to provide a working understanding of key models and solution
+          concepts, along with the ability to analyze and design fair and efficient
+          allocation algorithms.
+        </p>
+      </section>
+
+      <section>
+        <h2>Schedule</h2>
+        <table class="schedule">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Topic</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>12.10.</td>
+              <td>Introduction to Fair Division</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    Fair Division · Hannaneh Akrami
+  </footer>
+</body>
+</html>
