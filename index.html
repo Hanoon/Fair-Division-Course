@@ -58,7 +58,7 @@
 
     .course-info {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 1rem;
       margin-top: -2.8rem;
       margin-bottom: 2.5rem;
@@ -141,12 +141,49 @@
       color: #334155;
     }
 
+    .schedule {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .schedule th,
+    .schedule td {
+      padding: 0.65rem 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .schedule th {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .schedule td:first-child,
+    .schedule th:first-child {
+      width: 6.5rem;
+      white-space: nowrap;
+      padding-left: 0;
+    }
+
+    .schedule tbody tr:last-child td {
+      border-bottom: none;
+    }
+
     footer {
       max-width: var(--max-width);
       margin: 0 auto;
       padding: 0 1.5rem 2.5rem;
       color: var(--muted);
       font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .course-info {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
     @media (max-width: 760px) {
@@ -180,6 +217,15 @@
         <div class="info-card">
           <span class="label">Teacher</span>
           <div class="value">Hannaneh Akrami</div>
+        </div>
+
+        <div class="info-card">
+          <span class="label">Time &amp; Location</span>
+          <div class="value">
+            Monday 10&ndash;12<br>
+            Room 1.002 (Seminarraum)<br>
+            <span class="small-note">Lenn&eacute;stra&szlig;e 2&ndash;4</span>
+          </div>
         </div>
 
         <div class="info-card">
@@ -226,22 +272,21 @@
       </section>
 
       <section>
-        <h2>Tentative Topics</h2>
-        <ul>
-          <li>Classical cake-cutting protocols, including proportionality and envy-freeness</li>
-          <li>Indivisible goods and fairness notions: EF, EF1, EFX, and MMS</li>
-          <li>Efficiency concepts: Pareto efficiency and social welfare measures, in particular Nash social welfare</li>
-          <li>Trade-offs between fairness and efficiency</li>
-          <li>Approximation algorithms and computational complexity of fair division</li>
-          <li>Market-based approaches: Fisher markets and competitive equilibria</li>
-          <li>Fair division with strategic agents and mechanism-design aspects</li>
-          <li>Randomized and probabilistic allocation methods</li>
-          <li>Recent advances and open problems in fair division</li>
-        </ul>
-
-        <div class="note">
-          The list of topics is tentative and may be adjusted during the semester.
-        </div>
+        <h2>Schedule</h2>
+        <table class="schedule">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Topic</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>12.10.</td>
+              <td>Introduction to Fair Division</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
     </div>
   </main>
