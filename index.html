@@ -160,6 +160,13 @@
       color: var(--c);
     }
     .info-card .value { font-size: 0.98rem; font-weight: 600; color: var(--navy); }
+    .exam-dates {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .exam-dates .info-card:nth-child(1) { --c: var(--blue); }
+    .exam-dates .info-card:nth-child(2) { --c: var(--coral); }
     .small-note {
       display: inline-block;
       margin-top: 0.25rem;
@@ -291,6 +298,7 @@
     }
     @media (max-width: 600px) {
       .course-info { grid-template-columns: 1fr; }
+      .exam-dates { grid-template-columns: 1fr; }
       header.hero { padding: 2.75rem 0 2.25rem; }
       nav .brand { display: none; }
       .lecture { grid-template-columns: 2.6rem 1fr; }
@@ -310,6 +318,7 @@
       <span class="brand">Fair Division</span>
       <ul>
         <li><a href="#description">Description</a></li>
+        <li><a href="#exam">Exam</a></li>
         <li><a href="#lectures">Lectures</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -405,6 +414,22 @@
         </p>
       </section>
 
+      <section id="exam">
+        <h2>Examination</h2>
+        <div class="rule"></div>
+        <p>The course is assessed by an <span class="hl">oral exam</span>.</p>
+        <div class="exam-dates">
+          <div class="info-card">
+            <span class="label">First examination period</span>
+            <div class="value">1 and 2 February 2027</div>
+          </div>
+          <div class="info-card">
+            <span class="label">Second examination period</span>
+            <div class="value">22 March 2027</div>
+          </div>
+        </div>
+      </section>
+
       <section id="lectures">
         <h2>Lectures</h2>
         <div class="rule"></div>
@@ -481,6 +506,24 @@
               </a>
             </div>
           </li>
+          <li class="lecture">
+            <div class="num">05</div>
+            <div>
+              <div class="date">09.11.</div>
+              <div class="title">EFX with Charity &middot; Identical Valuations</div>
+              <div class="desc">EFX allocations with fewer than <em>n</em> donated goods that nobody envies, minimal envied subsets and improving configurations, and EFX for identical valuations and two agents.</div>
+            </div>
+            <div class="links">
+              <a class="btn" href="slides/lecture-05.pdf" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg>
+                Slides
+              </a>
+              <a class="btn btn-notes" href="notes/lecture-05-notes.pdf" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg>
+                Lecture notes
+              </a>
+            </div>
+          </li>
         </ol>
         <div class="note">Slides and lecture notes are added after each lecture.</div>
       </section>
@@ -488,7 +531,7 @@
       <section id="acknowledgements">
         <h2>Acknowledgements</h2>
         <div class="rule"></div>
-        <p>Some of the lecture notes and slides are based on lecture notes by <a href="https://sites.google.com/view/masoudseddighin/masoud-seddighin" target="_blank" rel="noopener">Masoud Seddighin</a> and lecture slides by <a href="https://sites.google.com/view/fair-division-nidhi-rathi/home" target="_blank" rel="noopener">Nidhi Rathi</a>.</p>
+        <p>The first two lecture notes and slides are based on lecture notes by <a href="https://sites.google.com/view/masoudseddighin/masoud-seddighin" target="_blank" rel="noopener">Masoud Seddighin</a> and lecture slides by <a href="https://sites.google.com/view/fair-division-nidhi-rathi/home" target="_blank" rel="noopener">Nidhi Rathi</a>.</p>
       </section>
 
       <section id="contact">
