@@ -259,6 +259,18 @@
       font-size: 0.92rem;
     }
 
+    .announce {
+      margin: 0 0 2rem;
+      padding: 1rem 1.2rem;
+      border-left: 4px solid var(--coral);
+      background: var(--coral-soft);
+      border-radius: 6px;
+      color: #334155;
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+    .announce strong { color: var(--coral); }
+
     /* ── Contact ── */
     .contact-card {
       display: flex;
@@ -388,6 +400,13 @@
         </div>
       </div>
 
+      <div class="announce" id="evaluation">
+        <strong>Course evaluation.</strong> The evaluation of this course takes place in the lecture on <strong>Monday, 30 November 2026</strong>. Please attend and bring a mobile device (phone, tablet or laptop).
+        If you cannot attend, please fill in the questionnaire between <strong>25 November and 3 December 2026</strong> at
+        <a href="https://www.umfragen.uni-bonn.de/lehre/Mathe/" target="_blank" rel="noopener">www.umfragen.uni-bonn.de/lehre/Mathe/</a>
+        (course ID V5C4), using the password announced in the lecture.
+      </div>
+
       <section id="exam">
         <h2>Examination</h2>
         <div class="rule"></div>
@@ -457,7 +476,7 @@
             <div>
               <div class="date">19.10.</div>
               <div class="title">Envy-free Cake Cutting &middot; Sperner&rsquo;s Lemma</div>
-              <div class="desc">Selfridge&ndash;Conway, query complexity of envy-freeness, Sperner&rsquo;s lemma, and envy-free divisions with contiguous pieces for any number of agents.</div>
+              <div class="desc">Selfridge&ndash;Conway, Sperner&rsquo;s lemma, and envy-free cake cutting with contiguous pieces.</div>
             </div>
             <div class="links">
               <a class="btn" href="slides/lecture-02.pdf" target="_blank" rel="noopener">
@@ -475,7 +494,7 @@
             <div>
               <div class="date">26.10.</div>
               <div class="title">Indivisible Items &middot; EF1 and EFX</div>
-              <div class="desc">EF1 and EFX, round robin, envy-cycle elimination, and top-trading envy-cycle elimination for goods and chores.</div>
+              <div class="desc">EF1 and EFX, round robin, and envy-cycle elimination for goods and chores.</div>
             </div>
             <div class="links">
               <a class="btn" href="slides/lecture-03.pdf" target="_blank" rel="noopener">
@@ -493,7 +512,7 @@
             <div>
               <div class="date">02.11.</div>
               <div class="title">Nash Welfare &middot; Partial EFX</div>
-              <div class="desc">Nash social welfare, maximum Nash welfare is EF1 and Pareto optimal, and EFX partial allocations with high Nash welfare via donations.</div>
+              <div class="desc">Nash welfare, maximum Nash welfare is EF1 and Pareto optimal, and partial EFX allocations.</div>
             </div>
             <div class="links">
               <a class="btn" href="slides/lecture-04.pdf" target="_blank" rel="noopener">
@@ -511,7 +530,7 @@
             <div>
               <div class="date">09.11.</div>
               <div class="title">EFX with Charity &middot; Identical Valuations</div>
-              <div class="desc">EFX allocations with fewer than <em>n</em> donated goods that nobody envies, minimal envied subsets and improving configurations, and EFX for identical valuations and two agents.</div>
+              <div class="desc">EFX with fewer than <em>n</em> donated goods, and EFX for identical valuations and two agents.</div>
             </div>
             <div class="links">
               <a class="btn" href="slides/lecture-05.pdf" target="_blank" rel="noopener">
@@ -529,7 +548,7 @@
             <div>
               <div class="date">16.11.</div>
               <div class="title">Fisher Markets &middot; EF1 and Pareto Optimality</div>
-              <div class="desc">Fisher market equilibria, the first welfare theorem and fractional Pareto optimality, price envy-freeness up to one good, and the algorithm of Barman, Krishnamurthy and Vaish for EF1 and fPO allocations.</div>
+              <div class="desc">Fisher markets, fractional Pareto optimality, pEF1, and an algorithm for EF1 and fPO.</div>
             </div>
             <div class="links">
               <a class="btn" href="slides/lecture-06.pdf" target="_blank" rel="noopener">
@@ -537,6 +556,24 @@
                 Slides
               </a>
               <a class="btn btn-notes" href="notes/lecture-06-notes.pdf" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg>
+                Lecture notes
+              </a>
+            </div>
+          </li>
+          <li class="lecture">
+            <div class="num">07</div>
+            <div>
+              <div class="date">23.11.</div>
+              <div class="title">Approximating the Nash Welfare</div>
+              <div class="desc">A 1.45-approximation of the maximum Nash welfare, and EF1 allocations with half the maximum Nash welfare for subadditive valuations.</div>
+            </div>
+            <div class="links">
+              <a class="btn" href="slides/lecture-07.pdf" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg>
+                Slides
+              </a>
+              <a class="btn btn-notes" href="notes/lecture-07-notes.pdf" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg>
                 Lecture notes
               </a>
